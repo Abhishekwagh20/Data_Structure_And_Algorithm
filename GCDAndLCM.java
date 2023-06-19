@@ -5,23 +5,24 @@ import java.util.Scanner;
 public class GCDAndLCM {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int num1 = scanner.nextInt();
-        int num2 = scanner.nextInt();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
         int gcd = 0;
-        for (int i = 2; i <= num1; i++) {
-            if(num1%i == 0){
-                for (int j = 2; j <= num2; j++) {
-                    if(num2%j == 0){
-                        if(i==j){
-                            gcd = i;
-                        }
-                    }
+        if(a <= b){
+            for (int i = 1; i <= a; i++) {
+                if(a%i == 0 && b%i == 0){
+                   gcd = i;
+                }
+            }
+        }else {
+            for (int i = 1; i <= b; i++) {
+                if(b%i == 0 && a%i==0){
+                   gcd = i;
                 }
             }
         }
-        int lcm = (num1 * num2) / gcd;
-        System.out.println("GCD: "+gcd);
-        System.out.println("LCM: "+lcm);
+        int lcm = (a * b) / gcd;
+        System.out.println("gcd "+ gcd + " Lcm " + lcm);
         //-----------------------------------------------------
 //        int n =scanner.nextInt();
 //        int n1 =scanner.nextInt();
