@@ -1,3 +1,4 @@
+//assume the number will be odd
 package Data_Structure_And_Algorithm;
 
 import java.util.Scanner;
